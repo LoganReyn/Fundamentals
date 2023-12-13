@@ -1,0 +1,26 @@
+* {
+    color:purple;
+    f;
+}
+
+body {
+    background-color: lightgray;
+}
+
+.drop-down {
+    border-radius: 20px;
+    font-size: x-large;
+    text-align: center;
+    align-self: center;
+    background-color: gray;
+}
+
+.drop-down:hover {
+    background-color: antiquewhite;
+}
+
+/* `#` uses element id name (element id = '')*/
+/* refrenceing a class (element class = '') */
+
+
+/* Affect Every Element */
