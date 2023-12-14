@@ -100,8 +100,13 @@ function buyHealth() {
         gold -= 10;
         health += 10;
         updateStats();
+    } else {
+        //template literals  
+        text.innerText = `You have ${gold} gold. You need at least 10 gold!`
     }
 }
+
+
 
 function updateStats() {
     healthText.innerText = health
@@ -111,7 +116,17 @@ function updateStats() {
 
 
 function buyWeapon() {
-    
+    if (gold >= 30) {
+        gold -=30;
+        currentWeapon ++;
+        updateStats();
+        let newWeapon = weapons[currentWeapon].name;
+        text.innerText = `You now have a ${newWeapon}`
+        inventory.push(newWeapon)
+        text.innerText += ` In your inventory you have: ${inventory}`
+    } else {
+        text.innerText = `You do not have enough gold to buy a weapon. Current Gold = ${gold}`
+    }
 }
 
 function fightSlime() {
